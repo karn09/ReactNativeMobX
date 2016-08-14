@@ -51,7 +51,7 @@ class TodoList extends Component {
       component: NewItem,
       type: 'Modal',
       passProps: {
-        item: '',
+        item,
         store: this.props.store
       }
     })
