@@ -15,7 +15,7 @@ import {
 
 class ReactNativeMobX extends Component {
   // required: renders scene for given route. invoked with route and Navigator object.
-  renderScene (route, Navigator) {
+  renderScene (route, navigator) {
     return <route.component {...route.passProps} navigator={navigator} />
   }
   // optional: config scene animations. invoked with route and routeStack param.
@@ -23,9 +23,9 @@ class ReactNativeMobX extends Component {
   // routeStack is the set of currently mounted routes that navigator can transition to.
   configureScene (route, routeStack) {
     if (route.type === 'Modal') {
-      return Navigator.sceneConfigs.FloatFromBottom
+      return Navigator.SceneConfigs.FloatFromBottom
     }
-    return Navigator.sceneConfigs.PushFromRight
+    return Navigator.SceneConfigs.PushFromRight
   }
 
   render () {
@@ -42,6 +42,6 @@ class ReactNativeMobX extends Component {
         />
     )
   }
-});
+}
 
 AppRegistry.registerComponent('ReactNativeMobX', () => ReactNativeMobX);
